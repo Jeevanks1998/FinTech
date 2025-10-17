@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120">
+  <rect x="4" y="4" width="192" height="112" rx="10" fill="#fff" stroke="#e6f0ff"/>
+  <g transform="translate(14,14)" font-family="Poppins, sans-serif">
+    <rect x="0" y="0" width="60" height="60" rx="8" fill="#f0f9ff"/>
+    <text x="70" y="20" font-size="12" fill="#0b2545">Plan</text>
+    <text x="70" y="40" font-size="18" fill="#007bff">₹1,00,000</text>
+  </g>
+</svg>

@@ -1,0 +1,98 @@
+/* MG FinTech - Enhanced CSS with animations */
+:root{
+  --blue:#0b63ff;
+  --accent:#00a86b;
+  --muted:#f6f9ff;
+  --dark:#0b2545;
+  --radius:12px;
+  --container:1100px;
+  font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:linear-gradient(180deg,#fbfdff,#ffffff);color:var(--dark);-webkit-font-smoothing:antialiased}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+.site-header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.8);backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid rgba(11,37,69,0.04)}
+.header-inner{display:flex;align-items:center;gap:1rem;justify-content:space-between;padding:0.75rem 0}
+.logo{font-weight:800;color:var(--dark);letter-spacing:0.2px}
+.logo span{color:var(--blue)}
+.nav{display:flex;gap:1rem;align-items:center}
+.nav a{color:var(--dark);text-decoration:none;padding:0.45rem 0.6rem;border-radius:8px;font-weight:500}
+.nav a:hover{background:rgba(11,99,255,0.06)}
+.auth .btn{margin-left:0.5rem}
+.nav-toggle{display:none;background:none;border:0;font-size:1.2rem}
+
+/* Hero */
+.hero{padding:3rem 0;position:relative;overflow:visible}
+.hero-inner{display:flex;gap:2rem;align-items:center;flex-wrap:wrap}
+.hero-left{flex:1;min-width:300px}
+.hero h1{font-size:2.25rem;margin:0 0 0.5rem;line-height:1.05;letter-spacing:-0.6px;animation:slideUp .6s ease both}
+.hero p{margin:0 0 1rem;color:#3b4a63;opacity:0.95;animation:fadeIn .8s .15s both}
+.cta .btn{margin-right:0.5rem;transform:translateY(0);transition:transform .2s}
+.cta .btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(11,99,255,0.12)}
+.hero-illus{width:420px;max-width:48%;min-width:260px;animation:float 6s ease-in-out infinite;}
+
+/* plan card small list */
+.plans-list{display:flex;flex-direction:column;gap:0.5rem}
+
+/* features */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding:2rem 0}
+.feature{background:#fff;border-radius:10px;padding:1.25rem;box-shadow:0 8px 30px rgba(11,37,69,0.04);transition:transform .25s;transform-origin:center;opacity:0;transform:translateY(12px);animation:fadeInUp .6s ease forwards}
+.feature:hover{transform:translateY(-6px)}
+
+/* Plans grid */
+.plans-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem}
+.plan-card{background:#fff;border-radius:12px;padding:1rem;box-shadow:0 12px 40px rgba(11,37,69,0.06);transition:transform .18s ease,box-shadow .18s;opacity:0;transform:translateY(16px)}
+.plan-card.visible{opacity:1;transform:none}
+.plan-card h3{margin:0 0 0.25rem}
+.plan-meta{color:#6b7280;font-size:0.95rem;margin-top:0.35rem}
+.plan-actions{display:flex;gap:0.5rem;margin-top:0.75rem}
+
+/* dashboard & others */
+.dashboard{display:flex;gap:1rem;padding:1rem 0}
+.sidebar{width:240px;background:linear-gradient(180deg,#fff,#fbfdff);padding:1rem;border-radius:10px;box-shadow:0 8px 24px rgba(11,37,69,0.03)}
+.sidebar ul{list-style:none;padding:0;margin:0}
+.sidebar li{margin:0.5rem 0;padding:0.45rem;border-radius:8px}
+.sidebar li.active{background:rgba(11,99,255,0.06);font-weight:700}
+
+/* forms and tables */
+.table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 8px 24px rgba(11,37,69,0.03)}
+.table th,.table td{padding:0.85rem;border-bottom:1px solid #f1f5f9;text-align:left}
+input,textarea,select{width:100%;padding:0.6rem;border:1px solid #eef2ff;border-radius:8px;background:#fff}
+
+/* footer */
+.site-footer{background:linear-gradient(180deg,#071633,#0b2545);color:#fff;padding:1.25rem 0;margin-top:2rem}
+.site-footer .container{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.5rem}
+
+/* buttons */
+.btn{display:inline-block;padding:0.6rem 0.9rem;border-radius:10px;background:var(--blue);color:#fff;text-decoration:none;border:none;cursor:pointer;font-weight:600}
+.btn-outline{background:transparent;color:var(--blue);border:1px solid rgba(11,99,255,0.14)}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(2,6,23,0.45);display:none;align-items:center;justify-content:center;padding:1rem}
+.modal-content{background:#fff;padding:1.25rem;border-radius:10px;max-width:520px;width:100%;position:relative;box-shadow:0 20px 60px rgba(11,37,69,0.12)}
+.modal-close{position:absolute;right:0.5rem;top:0.25rem;border:0;background:none;font-size:1.5rem;cursor:pointer}
+
+/* small util */
+.container-wide{max-width:1200px}
+
+/* animations */
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes fadeInUp{to{opacity:1;transform:none}}
+
+/* responsive */
+@media (max-width:1000px){
+  .hero-illus{max-width:46%}
+  .features{grid-template-columns:1fr;gap:0.75rem}
+  .sidebar{display:none}
+}
+@media (max-width:700px){
+  .nav{display:none}
+  .nav-toggle{display:block}
+  .hero-illus{display:none}
+  .hero h1{font-size:1.6rem}
+  .plans-grid{grid-template-columns:repeat(1,1fr)}
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Silver Plan",
+    "amount": 100000,
+    "members": 20,
+    "duration": 20,
+    "monthly": 5000,
+    "start_date": "2025-01-01",
+    "status": "Open",
+    "description": "Balanced plan for small groups. Monthly installment fixed.",
+    "auction_day": "Every 1st month"
+  },
+  {
+    "id": 2,
+    "name": "Gold Plan",
+    "amount": 200000,
+    "members": 25,
+    "duration": 25,
+    "monthly": 8000,
+    "start_date": "2025-02-01",
+    "status": "Open",
+    "description": "Higher-value plan with more members and longer duration.",
+    "auction_day": "Every 1st month"
+  },
+  {
+    "id": 3,
+    "name": "Starter Plan",
+    "amount": 50000,
+    "members": 10,
+    "duration": 10,
+    "monthly": 5000,
+    "start_date": "2025-03-01",
+    "status": "Open",
+    "description": "Short term plan ideal for quick returns.",
+    "auction_day": "Every 1st month"
+  },
+  {
+    "id": 4,
+    "name": "Platinum Plan",
+    "amount": 500000,
+    "members": 50,
+    "duration": 50,
+    "monthly": 10000,
+    "start_date": "2025-01-15",
+    "status": "Open",
+    "description": "High-value long term plan for established groups.",
+    "auction_day": "Every 15th"
+  },
+  {
+    "id": 5,
+    "name": "Family Plan",
+    "amount": 250000,
+    "members": 30,
+    "duration": 25,
+    "monthly": 8333,
+    "start_date": "2025-04-01",
+    "status": "Open",
+    "description": "Family-focused plan with flexible rules.",
+    "auction_day": "Every 1st month"
+  },
+  {
+    "id": 6,
+    "name": "Micro Plan",
+    "amount": 20000,
+    "members": 5,
+    "duration": 5,
+    "monthly": 4000,
+    "start_date": "2025-05-01",
+    "status": "Closed",
+    "description": "Very small group, short tenure.",
+    "auction_day": "N/A"
+  },
+  {
+    "id": 7,
+    "name": "Business Booster",
+    "amount": 300000,
+    "members": 30,
+    "duration": 30,
+    "monthly": 10000,
+    "start_date": "2025-02-20",
+    "status": "Open",
+    "description": "Designed for small business capital needs.",
+    "auction_day": "Every 20th"
+  },
+  {
+    "id": 8,
+    "name": "Community Plan",
+    "amount": 150000,
+    "members": 15,
+    "duration": 15,
+    "monthly": 10000,
+    "start_date": "2025-06-01",
+    "status": "Open",
+    "description": "Community savings with moderate tenure.",
+    "auction_day": "Every 1st month"
+  }
+]
