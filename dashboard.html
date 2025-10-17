@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard - MG FinTech</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">MG <span>FinTech</span></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="plans.html">Plans</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="auth">
+        <a class="btn btn-outline" href="login.html">Login</a>
+        <a class="btn" href="register.html">Register</a>
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container dashboard">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#">Profile</a></li>
+        <li class="active"><a href="#">My Chits</a></li>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Notifications</a></li>
+      </ul>
+    </aside>
+    <section class="dash-main">
+      <h1>Member Dashboard (UI Only)</h1>
+      <div class="cards">
+        <div class="card small">Active Chits<br><strong id="activeChits">3</strong></div>
+        <div class="card small">Upcoming Dues<br><strong id="upcomingDues">₹8,000</strong></div>
+        <div class="card small">Total Paid<br><strong id="totalPaid">₹72,000</strong></div>
+      </div>
+
+      <h2>Payment History</h2>
+      <table class="table">
+        <thead><tr><th>Date</th><th>Plan</th><th>Amount</th><th>Status</th></tr></thead>
+        <tbody id="historyBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year-dash"></span> MG FinTech</div>
+      <div>Contact: support@mgfintech.example</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year-dash').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

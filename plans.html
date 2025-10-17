@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Plans - MG FinTech</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">MG <span>FinTech</span></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="plans.html">Plans</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="auth">
+        <a class="btn btn-outline" href="login.html">Login</a>
+        <a class="btn" href="register.html">Register</a>
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h1>Available Chit Plans</h1>
+    <div class="filters" style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.75rem">
+      <input id="search" placeholder="Search by name or amount" style="flex:1">
+      <select id="durationFilter"><option value="">All durations</option></select>
+    </div>
+
+    <div id="plans-grid" class="plans-grid"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year-plans"></span> MG FinTech</div>
+      <div>Contact: support@mgfintech.example</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year-plans').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+  <script src="js/plans.js"></script>
+</body>
+</html>

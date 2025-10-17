@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Plan Details - MG FinTech</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">MG <span>FinTech</span></div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="plans.html">Plans</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="auth">
+        <a class="btn btn-outline" href="login.html">Login</a>
+        <a class="btn" href="register.html">Register</a>
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container content">
+    <div id="plan-detail" class="plan-detail"></div>
+
+    <div class="modal" id="joinModal" aria-hidden="true">
+      <div class="modal-content">
+        <button class="modal-close" id="closeModal">×</button>
+        <h3>Join Plan</h3>
+        <form id="joinForm">
+          <label>Name<input name="name" required></label>
+          <label>Mobile<input name="mobile" required></label>
+          <label>Email<input name="email" type="email" required></label>
+          <button class="btn" type="submit">Confirm Join (simulation)</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>© <span id="year-detail"></span> MG FinTech</div>
+      <div>Contact: support@mgfintech.example</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year-detail').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+  <script src="js/plans.js"></script>
+  <script>
+    const modal = document.getElementById('joinModal');
+    const closeModal = document.getElementById('closeModal');
+    closeModal.addEventListener('click',()=> modal.style.display='none');
+    window.openJoinModal = () => { modal.style.display='flex'; }
+    document.getElementById('joinForm').addEventListener('submit',(e)=> {
+      e.preventDefault();
+      alert('You have (simulated) joined the plan.'); modal.style.display='none';
+    });
+  </script>
+</body>
+</html>
